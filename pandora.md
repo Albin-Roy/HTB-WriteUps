@@ -30,7 +30,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 check port 80 on browser
 
-![](/root/.config/marktext/images/2022-06-01-00-30-19-image.png)
+![](/assets/images/2022-06-01-00-30-19-image.png)
 
 
 
