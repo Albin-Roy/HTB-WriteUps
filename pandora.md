@@ -136,6 +136,6 @@ ssh -L 8000:127.0.0.1:80 daniel@10.129.99.118
 
 Now, browse for localhost:8000 on our browser.
 
-![](/root/.config/marktext/images/2022-06-01-00-31-29-image.png)
+![](/assets/images/2022-06-01-00-31-29-image.png)
 
 
