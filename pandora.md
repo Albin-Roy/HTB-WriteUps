@@ -2,7 +2,7 @@
 
 # Pandora - HackTheBox WriteUp
 
-![](/htb_assets/images/pandora/2022-06-02-05-34-30-image.png)
+<img src="htb_assets/images/pandora/2022-06-02-05-34-30-image.png" style="margin-left: 20px; zoom: 60%;" align=left />
 
 ## 1. Enumeration
 
@@ -30,7 +30,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 Port 80 is open and we can find website there.
 
-![](/htb_assets/images/pandora/2022-06-01-00-30-19-image.png)
+<img src="htb_assets/images/pandora/2022-06-01-00-30-19-image.png" style="margin-left: 20px; zoom: 60%;" align=left />
 
 
 
