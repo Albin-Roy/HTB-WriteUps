@@ -1,6 +1,6 @@
 # Validation - HackTheBox
 
-![](/root/.config/marktext/images/2022-06-08-13-34-21-image.png)
+<img src="../htb_assets/images/validation/2022-06-08-13-34-21-image.png"/>
 
 
 
@@ -44,11 +44,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ### Union SQL Injection
 
-![](/root/.config/marktext/images/2022-06-08-14-31-28-image.png)
+<img src="../htb_assets/images/validation/2022-06-08-14-31-28-image.png"/>
 
 
 
-![](/root/.config/marktext/images/2022-06-08-14-31-36-image.png)
+<img src="../htb_assets/images/validation/2022-06-08-14-31-36-image.png"/>
 
 
 
@@ -56,13 +56,13 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 Now, writes shell code into shell.php
 
-![](/root/.config/marktext/images/2022-06-08-14-39-45-image.png)
+<img src="../htb_assets/images/validation/2022-06-08-14-39-45-image.png"/>
 
 
 
 While passing system command to the url we can execute system commands.
 
-![](/root/.config/marktext/images/2022-06-08-14-49-21-image.png)
+<img src="../htb_assets/images/validation/2022-06-08-14-49-21-image.png"/>
 
 
 
@@ -70,7 +70,7 @@ While passing system command to the url we can execute system commands.
 
 Let's create a bash reverse shell by turning listener on netcat
 
-![](/root/.config/marktext/images/2022-06-08-14-50-59-image.png)
+<img src="../htb_assets/images/validation/2022-06-08-14-50-59-image.png"/>
 
 
 

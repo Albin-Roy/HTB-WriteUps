@@ -1,6 +1,6 @@
 # Cap - HackTheBox
 
-![](/root/.config/marktext/images/2022-06-05-13-02-55-image.png)
+<img src="../htb_assets/images/cap/2022-06-05-13-02-55-image.png"/>
 
 
 
@@ -132,13 +132,13 @@ Nmap done: 1 IP address (1 host up) scanned in 160.49 seconds
 
 #### Web Enumeration
 
-![](/root/.config/marktext/images/2022-06-05-23-14-03-image.png)
+<img src="../htb_assets/images/cap/2022-06-05-23-14-03-image.png"/>
 
 We can download the .pcap file. After trying to change the number 2 to 0 in the url, we get the following results.
 
 
 
-![](/root/.config/marktext/images/2022-06-05-23-14-12-image.png)
+<img src="../htb_assets/images/cap/2022-06-05-23-14-12-image.png"/>
 
 
 
@@ -146,7 +146,7 @@ We can download the .pcap file. After trying to change the number 2 to 0 in the 
 
 After analysing .pcap file in wireshark,  we can see a tcp stream using ftp. Folllowing the  tcp stream we get the user credentials.
 
-![](/root/.config/marktext/images/2022-06-05-23-12-36-image.png)
+<img src="../htb_assets/images/cap/2022-06-05-23-12-36-image.png"/>
 
 username: nathan
 

@@ -32,7 +32,7 @@ Web application running on port 80 and port 3000 are the same. It is reverse pro
 
 
 
-![](/root/.config/marktext/images/2022-06-04-02-06-06-image.png)
+<img src="../htb_assets/images/secret/2022-06-04-02-06-06-image.png"/>
 
 There is link to download the source. Let's download it.
 
@@ -40,9 +40,9 @@ There is link to download the source. Let's download it.
 
 ### User Registration
 
-![](/root/.config/marktext/images/2022-06-04-03-45-27-image.png)
+<img src="../htb_assets/images/secret/2022-06-04-03-45-27-image.png"/>
 
-![](/root/.config/marktext/images/2022-06-04-03-45-41-image.png)
+<img src="../htb_assets/images/secret/2022-06-04-03-45-41-image.png"/>
 
 Registration successful.
 
@@ -50,9 +50,9 @@ Registration successful.
 
 ### User Login
 
-![](/root/.config/marktext/images/2022-06-04-03-46-46-image.png)
+<img src="../htb_assets/images/secret/2022-06-04-03-46-46-image.png"/>
 
-![](/root/.config/marktext/images/2022-06-04-03-47-23-image.png)
+<img src="../htb_assets/images/secret/2022-06-04-03-47-23-image.png"/>
 
 Login successful.
 
@@ -155,9 +155,9 @@ index fb6f587..31db370 100644
 
 Got the secret token. We add this token to jwt.
 
-![](/root/.config/marktext/images/2022-06-04-04-27-14-image.png)
+<img src="../htb_assets/images/secret/2022-06-04-04-27-14-image.png"/>
 
-![](/root/.config/marktext/images/2022-06-04-04-27-48-image.png)
+<img src="../htb_assets/images/secret/2022-06-04-04-27-48-image.png"/>
 
 Send it using burp and we can see the response with - 
 
@@ -170,11 +170,11 @@ Send it using burp and we can see the response with -
 }
 ```
 
-![](/root/.config/marktext/images/2022-06-04-13-14-12-image.png)
+<img src="../htb_assets/images/secret/2022-06-04-13-14-12-image.png"/>
 
-![](/root/.config/marktext/images/2022-06-04-13-14-21-image.png)
+<img src="../htb_assets/images/secret/2022-06-04-13-14-21-image.png"/>
 
-![](/root/.config/marktext/images/2022-06-04-13-14-32-image.png)
+<img src="../htb_assets/images/secret/2022-06-04-13-14-32-image.png"/>
 
 
 
@@ -186,7 +186,7 @@ YmFzaCAgLWkgPiYgL2Rldi90Y3AvMTAuMTAuMTYuOC8xMjM0ICAwPiYx
 
 
 
-![](/root/.config/marktext/images/2022-06-04-13-15-06-image.png)
+<img src="htb_assets/images/secret/2022-06-04-13-15-06-image.png"/>
 
 ```
 ┌──(root💀kali)-[~/htb/secret]

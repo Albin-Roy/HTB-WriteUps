@@ -1,6 +1,6 @@
 # Ransom - HackTheBox
 
-![](/root/.config/marktext/images/2022-06-08-07-22-47-image.png)
+<img src="../htb_assets/images/ransom/2022-06-08-07-22-47-image.png"/>
 
 
 
@@ -40,23 +40,23 @@ Nmap done: 1 IP address (1 host up) scanned in 13.17 seconds
 
 
 
-![](/root/.config/marktext/images/2022-06-08-08-09-33-image.png)
+<img src="../htb_assets/images/ransom/2022-06-08-08-09-33-image.png"/>
 
 
 
-![](/root/.config/marktext/images/2022-06-08-08-08-44-image.png)
+<img src="../htb_assets/images/ransom/2022-06-08-08-08-44-image.png"/>
 
 Here is the request and response of the webpage, let's add some json value and see the response and change the Content-Type: application/json.
 
 
 
-![](/root/.config/marktext/images/2022-06-08-08-10-12-image.png)
+<img src="../htb_assets/images/ransom/2022-06-08-08-10-12-image.png"/>
 
 It accepts json type. Now lets try to change the value to get successful login.
 
 
 
-![](/root/.config/marktext/images/2022-06-08-08-12-24-image.png)
+<img src="../htb_assets/images/ransom/2022-06-08-08-12-24-image.png"/>
 
 After changing the value to true, we get the response with Login Successful message.
 
@@ -64,7 +64,7 @@ After changing the value to true, we get the response with Login Successful mess
 
 
 
-![](/root/.config/marktext/images/2022-06-08-08-15-30-image.png)
+<img src="../htb_assets/images/ransom/2022-06-08-08-15-30-image.png"/>
 
 Now we are logged in and got the user flag and some zip file.
 
