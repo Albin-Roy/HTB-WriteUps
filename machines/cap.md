@@ -1,6 +1,6 @@
 # Cap - HackTheBox
 
-<img src="../htb_assets/images/cap/2022-06-05-13-02-55-image.png"/>
+<img src="../htb_assets/images/cap/2022-06-05-13-02-55-image.png" width="350px" height="350px"/>
 
 
 
