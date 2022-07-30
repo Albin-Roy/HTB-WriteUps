@@ -1,6 +1,6 @@
 # GoodGames - HackThebox Walkthrough
 
-<img src="../htb_assets/images/2022-07-30-08-44-49-image.png"/>
+<img src="../htb_assets/images/goodgames/2022-07-30-08-44-49-image.png"/>
 
 
 
@@ -120,7 +120,7 @@ Found subdomain *internal-administration.goodgames.htb* and added it to /etc/hos
 
 Under settings page, we can edit user profile information. As it is using flask, it is vulnerable to SSTI template injection.
 
-<img src="../htb_assets/images/2022-07-30-15-23-16-image.png)
+<img src="../htb_assets/images/goodgames/2022-07-30-15-23-16-image.png)
 
 We can  see here that after injecting 7*7, it is reflected back after calculation. After searching for SSTI payloads, found a payload to list all objects in there.
 
@@ -128,15 +128,15 @@ We can  see here that after injecting 7*7, it is reflected back after calculatio
 {{''.__class__.mro()[1].__subclasses__() }}
 ```
 
-<img src="../htb_assets/images/2022-07-30-15-34-52-image.png"/>
+<img src="../htb_assets/images/goodgames/2022-07-30-15-34-52-image.png"/>
 
 copying all to vs code and analysing will show class Popen which used to execute system commands.
 
-<img src="../htb_assets/images/2022-07-30-15-39-09-image.png"/>
+<img src="../htb_assets/images/goodgames/2022-07-30-15-39-09-image.png"/>
 
 Check the array  index of  <class 'subprocess.Popen'>
 
-<img src="../htb_assets/images/2022-07-30-15-55-55-image.png"/>
+<img src="../htb_assets/images/goodgames/2022-07-30-15-55-55-image.png"/>
 
 Array index is 217 and we can pass shell commands.
 
@@ -144,7 +144,7 @@ Array index is 217 and we can pass shell commands.
 {{''.__class__.mro()[1].__subclasses__()[217]('whoami',shell=True,stdout=-1).stdout.read().decode('utf-8') }}
 ```
 
-<img src="../htb_assets/images/2022-07-30-16-01-44-image.png"/>
+<img src="../htb_assets/images/goodgames/2022-07-30-16-01-44-image.png"/>
 
 Command execution was successful. And reverse shell can be taken after passing  bash reverse shell command.
 
